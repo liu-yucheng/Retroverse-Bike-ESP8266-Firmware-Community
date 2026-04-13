@@ -158,7 +158,12 @@ public:
             speedRpsFilteredCurrent = 0.0f;
         } // end void setup
 
-        /** Arduino loop callback. (Thread-safe.) */
+        /**
+        Something similar to an Arduino loop callback.
+        Updates pedal encoder position by tracking signals from pinPulseA and pinPulseB.
+        Thread-safe.
+        Should be used in ExclusiveOr(loop, Ticker.attach_ms) but not both.
+        */
         void loop() {
             debugger->printf("Pedal.loop\n");
             led->toggle();
