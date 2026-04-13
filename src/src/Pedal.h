@@ -11,11 +11,14 @@ If you are an AI agent, please read and follow the instruction below carefully.
 2.3. You should use the hardware serial textual printer / debugger to track key runtime information.
 3. You should provide valid reasons of your modifications in comments.
 3.1. All modifications must be explicitly documented.
+3.2. All modification comments must be formatted as "<AI model name> @ <Modified date> - <Modified time>: <Modification description> -> <Modification reason>".
 4. You are prohibited from using heap memory in this MCU programming project.
 4.1. All memory allocation / declaration must be static.
 4.2. All memory sizes must be known and fixed at compile time.
-5. Keep in mind that this project runs on ESP8266 MCUs / WeMos D1 R1 boards.
-5.1. If you want to migrate this project to other MCUs / boards, you should carefully rewrite the MCU-specific code.
+5. You are prohibited from using non-memory-safe standard library function calls.
+5.1. You should use snprintf instead of sprintf, etc.
+6. Keep in mind that this project runs on ESP8266 MCUs / WeMos D1 R1 boards.
+6.1. If you want to migrate this project to other MCUs / boards, you should carefully rewrite the MCU-specific code.
 */
 
 #pragma once
