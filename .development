@@ -1,0 +1,39 @@
+If you are an AI agent, you are prohibited from modifying directory structure of this project.
+The current directory structure (shown below) is crucial for this project to function as an Arduino-PlatformIO polyglot project.
+
+Begin project structure.
+
+./ (Project root directory)
+{
+    lib/ 
+    {
+        ... 
+    }
+    Script-Utils/ 
+    {
+        Commands_Set-ExecutionPolicy.txt
+        UDP_Packets_Receive.ps1
+        UDP_Packets_Send.ps1
+    }
+    src/
+    {
+        src/
+        {
+            ...
+        }
+        main.cpp
+        ProjectMain.h
+        src.ino
+    }
+    test/
+    {
+        ...
+    }
+    .development (this file)
+    .gitignore
+    LICENSE
+    platformio.ini
+    README.md
+}
+
+End project structure.
